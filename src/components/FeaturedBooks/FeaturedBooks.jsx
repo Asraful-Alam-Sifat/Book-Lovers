@@ -1,17 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const getbooksdata = async () => {
-  const res = await fetch("http://localhost:3000/api/data");
-  if (!res.ok) {
-    throw new Error("Failed to fetch data", { cache: "no-store" });
-  }
-  const data = await res.json();
-  return data;
-};
+
 
 const FeaturedBooks = async () => {
-  const booksdata = await getbooksdata();
+  const booksdata = await getLocalBooks();
   const featuredBooks = booksdata.slice(0, 4);
   console.log(featuredBooks);
 
