@@ -1,3 +1,4 @@
+import { getLocalBooks } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +7,7 @@ import Link from "next/link";
 const FeaturedBooks = async () => {
   const booksdata = await getLocalBooks();
   const featuredBooks = booksdata.slice(0, 4);
-  console.log(featuredBooks);
+  // console.log(featuredBooks);
 
   return (
     <div className="container mx-auto py-15">
@@ -27,7 +28,7 @@ const FeaturedBooks = async () => {
 
             <h2 className="font-bold text-xl text-center mt-3">{book.title}</h2>
             <p className="text-center font-medium text-gray-500 text-lg capitalize">{book.author}</p>
-            <Link href={""} className="flex justify-center mt-5">
+            <Link href={`/books/${book.id}`} className="flex justify-center mt-5">
             <button  className="btn bg-blue-900 text-white rounded-lg hover:bg-blue-950 hover:border-2 hover:border-gray-500 transition-all duration-300 ">
               view details
             </button>

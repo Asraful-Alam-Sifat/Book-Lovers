@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-blue-50">
+      <body className="min-h-full flex flex-col bg-base-200">
           {children}
         </body>
     </html>
