@@ -1,6 +1,7 @@
-import FeaturedBooks from "@/components/FeaturedBooks/FeaturedBooks";
-import Banner from "@/components/HeroBanner/Banner";
-import Image from "next/image";
+import GenreSpotLight from "@/components/Home/Category/GenreSpotLight";
+import FeaturedBooks from "@/components/Home/FeaturedBooks/FeaturedBooks";
+import Banner from "@/components/Home/HeroBanner/Banner";
+
 
 
 
@@ -9,6 +10,9 @@ export default function Home() {
     <div>
       <Banner />
       <FeaturedBooks />
+      <section className="bg-blue-100">
+        <GenreSpotLight />
+      </section>
       
     </div>
   );

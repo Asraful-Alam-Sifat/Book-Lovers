@@ -7,7 +7,7 @@ import Link from "next/link";
 const FeaturedBooks = async () => {
   const booksdata = await getLocalBooks();
   const featuredBooks = booksdata.slice(0, 4);
-  // console.log(featuredBooks);
+ 
 
   return (
     <div className="container mx-auto py-15">

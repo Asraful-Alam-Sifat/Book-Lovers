@@ -1,4 +1,5 @@
-import Image from "next/image";import BannerImg from "../../assets/Photo/book-banner-img.jpg"; 
+import Image from "next/image";
+import BannerImg from "@/assets/Photo/book-banner-img.jpg"; 
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
