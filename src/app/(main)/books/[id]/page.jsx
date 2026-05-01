@@ -6,10 +6,10 @@ const BooksDetails = async ({ params }) => {
   const booksdata = await getLocalBooks();
   const books = booksdata.find((b) => b.id === parseInt(id));
 
-  console.log(books);
+  // console.log(books);
 
   return (
-    <div className="container mx-auto mt-10">
+    <div className="container mx-auto my-10">
       <h1 className="font-extrabold text-4xl " >Details</h1>
 
       <div className="bg-base-100 rounded-xl p-8 mt-5 flex flex-col justify-center items-center lg:flex-row lg:gap-15 gap-4 ">

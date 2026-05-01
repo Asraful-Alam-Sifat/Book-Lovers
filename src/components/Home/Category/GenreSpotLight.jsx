@@ -5,9 +5,9 @@ import React from 'react';
 
 const GenreSpotLight = async () => {
     const booksData = await getLocalBooks();
-    console.log(booksData);
+    // console.log(booksData);
     return (
-        <div className='container mx-auto pt-8'>
+        <div className='container mx-auto py-8'>
             <h1 className='font-bold text-5xl text-center uppercase'>genre spotlight</h1>
             
             <div className='grid grid-cols-3 gap-15 mt-5'>

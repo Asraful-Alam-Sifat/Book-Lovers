@@ -1,6 +1,7 @@
 import GenreSpotLight from "@/components/Home/Category/GenreSpotLight";
 import FeaturedBooks from "@/components/Home/FeaturedBooks/FeaturedBooks";
 import Banner from "@/components/Home/HeroBanner/Banner";
+import Reviews from "@/components/Home/Reviews/Reviews";
 
 
 
@@ -13,6 +14,7 @@ export default function Home() {
       <section className="bg-blue-100">
         <GenreSpotLight />
       </section>
+      <Reviews />
       
     </div>
   );
