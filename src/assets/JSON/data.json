@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Forest",
+    "author": "Arman Hossain",
+    "description": "A mysterious tale of a village surrounded by a forest that hides dark secrets.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co.com/M5WJ70fS/1.avif"
+  },
+  {
+    "id": 2,
+    "title": "Mastering JavaScript",
+    "author": "Nusrat Jahan",
+    "description": "A practical guide to modern JavaScript, covering ES6 and beyond.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://i.ibb.co.com/tw8PdtvX/978-1-349-14772-4.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Quantum Dreaming",
+    "author": "Dr. Reza Karim",
+    "description": "An introduction to the fascinating world of quantum physics.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://i.ibb.co.com/qM3FMkCz/9781068591860.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Lost in Time",
+    "author": "A.G. Riddle",
+    "description": "A time-travel story that explores love and consequences across centuries.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://i.ibb.co.com/Vck85f7f/download.jpg"
+  },
+  {
+    "id": 5,
+    "title": "React in Action",
+    "author": "Tanvir Ahmed",
+    "description": "Learn how to build dynamic user interfaces using React.js.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "image_url": "https://i.ibb.co.com/ynrBrz8f/download.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Human Brain",
+    "author": "Dr. Farhana Islam",
+    "description": "Explore the complexities and functions of the human brain.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://i.ibb.co.com/FkBrVZ3D/download.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Last Journey",
+    "author": "Stacy Gregg",
+    "description": "A moving story about a man’s final journey and self-discovery.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://i.ibb.co.com/1YLDGpnf/download.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Node.js Essentials",
+    "author": "Sabbir Khan",
+    "description": "A beginner-friendly guide to building backend applications with Node.js.",
+    "category": "Tech",
+    "available_quantity": 9,
+    "image_url": "https://i.ibb.co.com/nNpgFJ1r/download.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Space Travel",
+    "author": "Dr. Mahmud Hasan",
+    "description": "A deep dive into the history and future of space missions.",
+    "category": "Science",
+    "available_quantity": 2,
+    "image_url": "https://i.ibb.co.com/1YDqCnX2/download.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Whispers of the Night",
+    "author": "Molly Tabachnikov",
+    "description": "A haunting story filled with suspense and supernatural elements.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co.com/tp8pxx0J/download.jpg"
+  },
+  {
+    "id": 11,
+    "title": "CSS Mastery",
+    "author": "Rakib Hasan",
+    "description": "Advanced techniques for designing modern and responsive web layouts.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://i.ibb.co.com/yBVGrfMH/images.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Book of Life",
+    "author": "Stephen Jay Gould",
+    "description": "An overview of how life evolved on Earth over billions of years.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://i.ibb.co.com/TpDYMcv/download.jpg"
+  }
+]

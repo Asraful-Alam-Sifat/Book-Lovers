@@ -1,6 +1,6 @@
 import { Inter, Playfair } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/NavBar/Navbar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,15 +25,8 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <header>
-          <Navbar />
-        </header>
-        
-        <main>
+      <body className="min-h-full flex flex-col bg-blue-50">
           {children}
-        </main>
-        
         </body>
     </html>
   );
