@@ -9,17 +9,7 @@
     --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 }
 
-.swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  background: #1a1a2e; 
-}
-.swiper-button-next,
-.swiper-button-prev {
-  display: none;
-}
+
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -28,7 +18,7 @@
   height: 45px !important;
   border-radius: 50%;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  color: black !important; /* Arrow color */
+  color: black !important; 
 }
 
 .swiper-button-next::after,
@@ -37,9 +27,9 @@
   font-weight: bold;
 }
 
-/* Customizing Pagination Dots */
+
 .swiper-pagination-bullet-active {
-  background: #1e3a8a !important; /* Your theme blue */
+  background: #ffffff !important; 
   width: 12px;
   border-radius: 5px;
 }
