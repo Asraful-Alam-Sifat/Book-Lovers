@@ -1,8 +1,12 @@
 import Image from "next/image";
 import data from "@/assets/JSON/data.json";
+import Link from "next/link";
+import { Star } from "lucide-react";
+import reviewsData from '@/assets/JSON/reviewsData.json';
+import RecentArrivals from "@/components/AllBooks/RecentArrivals/RecentArrivals";
 
 const AllBooks = async ({ searchParams }) => {
-    const params = await searchParams;
+  const params = await searchParams;
   const category = params?.category || "all";
 
   const filteredBooks =
@@ -13,40 +17,53 @@ const AllBooks = async ({ searchParams }) => {
         );
 
   return (
-  <div className="px-8 py-6">
-    {category === 'all' && (
-        <div>hellow</div>
-    )}
+    <div className="px-8 py-6">
+      
+      
+
+
       <h1 className="text-2xl font-bold mb-6">
-        {category === "all" ? "All Books" : category} 
+        {category === "all" ? "All Books" : category}
         <span className="text-sm font-normal text-gray-500 ml-2">
           ({filteredBooks.length} books)
         </span>
       </h1>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
         {filteredBooks.map((book) => (
-          <div key={book.id} className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div
+            key={book.id}
+            className="border-3 border-gray-300  rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow p-4 "
+          >
             <Image
               src={book.image_url}
               alt={book.title}
               width={400}
-                height={300}
-              className="w-full h-48 object-cover rounded"
+              height={500}
+              className=" h-[300px] object-contain"
             />
             <div className="p-4">
-              <h2 className="font-semibold text-sm">{book.title}</h2>
-              <p className="text-xs text-gray-500 mt-1">By {book.author}</p>
-              <span className="inline-block mt-2 text-xs bg-orange-100 text-orange-600 px-2 py-0.5 rounded-full">
-                {book.category}
-              </span>
+              <h2 className="font-bold text-xl text-center">{book.title}</h2>
+              <p className="text-lg text-gray-500 mt-1 text-center">By {book.author}</p>
+             
+
+            </div>
+            <div className="text-center">
+              <Link
+              href={`/books/${book.id}`}
+              className="btn bg-blue-900 text-white rounded-lg hover:bg-blue-950 hover:border-2 hover:border-gray-500 transition-all duration-300 "
+            >
+              View Details
+            </Link>
             </div>
           </div>
-        ))}
+        ))} 
       </div>
 
       {filteredBooks.length === 0 && (
-        <p className="text-gray-500 text-center mt-20">No books found in this category.</p>
+        <p className="text-gray-500 text-center mt-20">
+          No books found in this category.
+        </p>
       )}
     </div>
   );

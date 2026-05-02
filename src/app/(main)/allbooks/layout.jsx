@@ -5,7 +5,7 @@ const AllBooksLayout = ({ children }) => {
   return (
        <div className="flex min-h-screen">
       
-      <aside className="w-64 bg-blue-100 shrink-0 self-stretch p-4">
+      <aside className="w-64 bg-blue-100 shrink-0 self-stretch p-4 w-[150px] lg:w-2xs ">
         <Suspense fallback={<div>Loading...</div>}>
           <CategorySidebar />
         </Suspense>

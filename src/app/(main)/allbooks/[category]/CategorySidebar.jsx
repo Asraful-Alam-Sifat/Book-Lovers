@@ -1,6 +1,5 @@
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
-import React from "react";
 import data from "@/assets/JSON/data.json";
 import Link from "next/link";
 
@@ -27,8 +26,8 @@ const CategorySidebar = () => {
   ];
 
   return (
-    <div className=" ">
-      <h3 className="font-bold text-lg mb-4 uppercase tracking-wide">
+    <div>
+      <h3 className=" font-bold text-lg mb-4 uppercase tracking-wide">
         Categories
       </h3>
       <ul className="grid  gap-2">

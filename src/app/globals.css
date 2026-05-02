@@ -3,7 +3,43 @@
 @source inline("text-yellow-500 underline text-white font-medium text-2xl transition-colors");
 
 
+
 @theme {
     --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
     --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #1a1a2e; 
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  color: black !important; /* Arrow color */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+/* Customizing Pagination Dots */
+.swiper-pagination-bullet-active {
+  background: #1e3a8a !important; /* Your theme blue */
+  width: 12px;
+  border-radius: 5px;
 }
