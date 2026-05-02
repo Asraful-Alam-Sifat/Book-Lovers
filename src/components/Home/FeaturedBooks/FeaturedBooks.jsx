@@ -22,6 +22,7 @@ const FeaturedBooks = async () => {
                 src={book.image_url}
                 alt={book.title}
                 fill
+                sizes={20}
                 className="object-cover"
               />
             </div>

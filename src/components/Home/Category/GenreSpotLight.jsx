@@ -10,7 +10,7 @@ const GenreSpotLight = async () => {
         <div className='container mx-auto py-8'>
             <h1 className='font-bold text-5xl text-center uppercase'>genre spotlight</h1>
             
-            <div className='grid grid-cols-3 gap-15 mt-5'>
+            <div className='grid md:grid-cols-3 gap-15 mt-5 px-3'>
                 <div className='bg-base-100 rounded-xl p-8 border-4 border-gray-300 hover:shadow-lg hover:border-cyan-600 hover:bg-gray-100 transition-all  duration-300'>
                    <BookOpenText className='w-[100px] h-[100px] mx-auto' /> 
                    <p className='font-extrabold text-3xl uppercase text-center mt-4'>story</p>

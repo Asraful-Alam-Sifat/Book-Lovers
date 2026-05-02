@@ -8,12 +8,12 @@ import { Globe, Mailbox, Phone } from 'lucide-react';
 const Footer = () => {
     return (
         <div className='bg-blue-900'>
-            <div className='container mx-auto py-10'>
+            <div className='container mx-auto py-10 px-3'>
 
-                <div className='flex justify-between'>
+                <div className='sm:flex sm:justify-between px-10 space-y-10'>
                     <div>
-                    <h1 className='text-white font-semibold text-3xl uppercase'>follow us</h1>
-                    <div className='flex justify-around mt-3'>
+                    <h1 className='text-white text-center font-semibold text-3xl uppercase'>follow us</h1>
+                    <div className='flex justify-around mt-5'>
                         <Image src={facebookLogo} alt="Facebook" className='w-10 h-10' />
                         <Image src={twitterLogo} alt="Twitter" className='w-10 h-10' />
                         <Image src={instagramLogo} alt="Instagram" className='w-10 h-10' />

@@ -13,6 +13,7 @@ const Banner = () => {
         fill 
         className="object-cover"
         priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
       />
       <div className="absolute inset-0 z-0 bg-linear-to-r from-[#C67026]/60 via-[#C67026]/40 to-[#C67026]/60"></div>
 
@@ -31,7 +32,7 @@ const Banner = () => {
          <div className="absolute inset-x-0 bottom-0 z-20">
           <Marquee speed={80} className="absolute z-30 bottom-0 bg-[#d26403] w-full text-white p-3 font-medium text-2xl">
           
-          <p>New Arrivals: [The Last Forest] | Special Discount on Memberships - Sign up today for exclusive offers and early access to our new collections!</p>
+          <p>New Arrivals: [Through The Silent Forest] | Special Discount on Memberships - Sign up today for exclusive offers and early access to our new collections!</p>
          </Marquee>
          </div>
       </div>
