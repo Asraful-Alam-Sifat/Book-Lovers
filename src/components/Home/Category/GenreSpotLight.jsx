@@ -23,14 +23,20 @@ const GenreSpotLight = async () => {
           </p>
         </Link>
 
-      <Link href={"/allbooks?category=tech"}  className='bg-base-100 rounded-xl p-8 border-4 border-gray-300 hover:shadow-lg hover:border-cyan-600 hover:bg-gray-100 transition-all  duration-300'>
-      <Cpu className="w-[100px] h-[100px] mx-auto" />
+        <Link
+          href={"/allbooks?category=tech"}
+          className="bg-base-100 rounded-xl p-8 border-4 border-gray-300 hover:shadow-lg hover:border-cyan-600 hover:bg-gray-100 transition-all  duration-300"
+        >
+          <Cpu className="w-[100px] h-[100px] mx-auto" />
           <p className="font-extrabold text-3xl uppercase text-center mt-4">
             tech
           </p>
-      </Link>
-        
-        <Link href={"/allbooks?category=science"}  className='bg-base-100 rounded-xl p-8 border-4 border-gray-300 hover:shadow-lg hover:border-cyan-600 hover:bg-gray-100 transition-all  duration-300'>
+        </Link>
+
+        <Link
+          href={"/allbooks?category=science"}
+          className="bg-base-100 rounded-xl p-8 border-4 border-gray-300 hover:shadow-lg hover:border-cyan-600 hover:bg-gray-100 transition-all  duration-300"
+        >
           <BrainCircuit className="w-[100px] h-[100px] mx-auto" />
           <p className="font-extrabold text-3xl uppercase text-center mt-4">
             science

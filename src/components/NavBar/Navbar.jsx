@@ -77,16 +77,13 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="flex justify-center items-center gap-0">
-            <Image
-              src={logoImg}
-              alt="Logo"
-              className="mr-2 w-[70px] h-auto"
-            />
+          <div className="">
+            
             <Link
               href="/"
-              className=" btn-ghost text-3xl text-white font-bold flex gap-0"
+              className=" btn-ghost text-3xl text-white font-bold flex flex justify-center items-center gap-0"
             >
+              <Image src={logoImg} alt="Logo" className="mr-2 w-[70px] h-auto" />
               Book<span className="text-yellow-700">Lovers</span>
             </Link>
           </div>

@@ -8,11 +8,11 @@ const CategorySidebar = () => {
   const searchParams = useSearchParams();
   const currentCategory = searchParams.get("category") || "all";
 
-      const uniqueCategories = [
+  const uniqueCategories = [
     ...new Set(
       data
         .map((b) => b.category)
-        .filter((c) => typeof c === "string" && c.trim() !== "")
+        .filter((c) => typeof c === "string" && c.trim() !== ""),
     ),
   ];
 
@@ -21,7 +21,9 @@ const CategorySidebar = () => {
     ...uniqueCategories.map((cate) => ({
       label: cate,
       value: String(cate).toLowerCase(),
-      count: data.filter((b) => b.category?.toLowerCase() === cate.toLowerCase()).length,
+      count: data.filter(
+        (b) => b.category?.toLowerCase() === cate.toLowerCase(),
+      ).length,
     })),
   ];
 
@@ -46,13 +48,16 @@ const CategorySidebar = () => {
                 href={href}
                 className={`flex justify-between items-center px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive ? "bg-orange-500 text-white" : "hover:bg-gray-100 text-gray-700"}`}
               >
-                <span  className="flex flex-col">{label}</span>
-                <span className={`text-xs px-2 py-0.5 rounded-full ${isActive ? 'bg-white text-orange-500' : 'bg-gray-200 text-gray-700'}`}>{count}</span>
+                <span className="flex flex-col">{label}</span>
+                <span
+                  className={`text-xs px-2 py-0.5 rounded-full ${isActive ? "bg-white text-orange-500" : "bg-gray-200 text-gray-700"}`}
+                >
+                  {count}
+                </span>
               </Link>
             </li>
           );
         })}
-        
       </ul>
     </div>
   );

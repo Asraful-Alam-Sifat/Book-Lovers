@@ -5,7 +5,9 @@ import SearchBar from "@/components/AllBooks/SearchBar/SearchBar.jsx";
 const AllBooksLayout = ({ children }) => {
   return (
     <div>
-      <Suspense fallback={<div className="bg-blue-900 text-white py-15 h-24" />}>
+      <Suspense
+        fallback={<div className="bg-blue-900 text-white py-15 h-24" />}
+      >
         <SearchBar />
       </Suspense>
 
