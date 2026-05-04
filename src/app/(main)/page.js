@@ -1,4 +1,4 @@
-import RecentArrivals from "@/components/AllBooks/RecentArrivals/RecentArrivals";
+import RecentArrivals from "@/components/Home/RecentArrivals/RecentArrivals";
 import GenreSpotLight from "@/components/Home/Category/GenreSpotLight";
 import FeaturedBooks from "@/components/Home/FeaturedBooks/FeaturedBooks";
 import Banner from "@/components/Home/HeroBanner/Banner";

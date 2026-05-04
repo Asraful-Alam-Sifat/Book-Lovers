@@ -8,11 +8,11 @@ const GenreSpotLight = async () => {
   // console.log(booksData);
   return (
     <div className="container mx-auto py-8 my-30">
-      <h1 className="font-bold text-5xl text-center uppercase">
+      <h1 className="font-bold text-5xl text-center uppercase mt-5">
         genre spotlight
       </h1>
 
-      <div className="grid md:grid-cols-3 gap-15 mt-5 px-2">
+      <div className="grid md:grid-cols-3 gap-15 mt-10 px-2">
         <Link
           href={"/allbooks?category=story"}
           className="bg-base-100 rounded-xl p-8 border-4 border-gray-300 hover:shadow-lg hover:border-cyan-600 hover:bg-gray-100 transition-all  duration-300"

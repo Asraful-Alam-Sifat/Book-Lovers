@@ -9,7 +9,7 @@ const AuthLayout = ({children}) => {
         <div>
             <Navbar />
             {children}
-            <ToastContainer position="top-right" autoClose={1000} />
+            <ToastContainer position="bottom-center" autoClose={1000} />
         </div>
     )
 };

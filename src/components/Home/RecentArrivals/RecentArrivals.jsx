@@ -13,7 +13,7 @@ import { useRef } from "react";
 const RecentArrivals = () => {
   return (
     <div className="container mx-auto my-30">
-      <h1 className="font-bold text-5xl uppercase my-5 text-center">
+      <h1 className="font-bold text-5xl uppercase mb-10 text-center">
         recent arrivals
       </h1>
       <Swiper
