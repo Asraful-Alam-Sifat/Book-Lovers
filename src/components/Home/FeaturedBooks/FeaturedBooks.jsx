@@ -16,7 +16,7 @@ const FeaturedBooks = async () => {
         {featuredBooks.map((book) => (
           <div
             key={book.id}
-            className="w-[500px] sm:w-[300px] md:w-[250px] lg:w-[250px] xl:w-[300px] bg-base-100 p-5 rounded-xl shadow-lg border-3 border-gray-200 hover:border-blue-500 transition-all duration-400 flexflex-col items-center h-full"
+            className="w-[500px] sm:w-[300px] md:w-[250px] lg:w-[250px] xl:w-[300px] bg-base-100 p-5 rounded-xl shadow-lg border-3 border-gray-200 hover:border-blue-500 hover:bg-base-300 transition-all duration-400 flexflex-col items-center h-full"
           >
             <div className="relative aspect-2/3 w-full overflow-hidden rounded-lg">
               <Image

@@ -43,7 +43,7 @@ const AllBooks = async ({ searchParams }) => {
         {filteredBooks.map((book) => (
           <div
             key={book.id}
-            className="border-3 border-gray-300  rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow p-4 "
+            className="  rounded-lg overflow-hidden shadow-lg border-3 border-gray-200 hover:border-blue-500 hover:bg-base-300 transition-all duration-400 p-4 "
           >
             <Image
               src={book.image_url}

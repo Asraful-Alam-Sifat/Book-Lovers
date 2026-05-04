@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BookLovers — Your Personal Digital Library
 
-## Getting Started
+A seamless and modern web application designed to digitize the traditional library experience. Users can explore a vast collection of books, filter by categories, and borrow titles digitally. The platform prioritizes security and performance using BetterAuth, Next.js, and MongoDB.
 
-First, run the development server:
+## 🛠️ Built With
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| Technology | Purpose |
+| :--- | :--- |
+| **Next.js** | Core framework and server-side rendering |
+| **BetterAuth** | Secure authentication and social login (Google) |
+| **MongoDB** | NoSQL database for users and book data |
+| **Tailwind CSS + DaisyUI** | Styling, theme components, and responsiveness |
+| **React-Toastify + SwiperJS** | Real-time user feedback and notifications |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔑 Key Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 1. Secure Authentication & Private Routes
+Integrated BetterAuth ensures that sensitive areas like the **User Profile** and **Borrowing Logic** are protected. Guest users are automatically redirected to login when trying to access private content.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Personalized User Profile
+Users can update their display name and profile image via an interactive modal. The UI updates instantly across the site, including a dynamic Navbar that reflects the user's login state and identity.
 
-## Learn More
+### 3. Dynamic Book Management
+Explore a vast collection of books with detailed pages showing descriptions, authors, and categories. The system supports real-time data fetching from MongoDB to ensure book availability is always accurate.
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Responsive & Modern UI
+Built with a mobile-first approach, the platform features clean layouts, elegant modals, and a custom navigation bar that adapts perfectly to any screen size.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚦 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Live Url:**
+   ```bash
+   
+    https://book-lovers-tan.vercel.app

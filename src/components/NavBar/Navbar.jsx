@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils.js";
 import { authClient } from "@/lib/auth-client";
 import { router } from "better-auth/api";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -17,7 +18,9 @@ const Navbar = () => {
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
+          
           router.push('/login')
+          toast.success('Sign Out Successfull')
         }
       }
     })
