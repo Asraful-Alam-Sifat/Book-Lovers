@@ -4,9 +4,24 @@ import Link from "next/link";
 import logoImg from "../../assets/Logo/logo.png";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils.js";
+import { authClient } from "@/lib/auth-client";
+import { router } from "better-auth/api";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const {data: session, isPending} = authClient.useSession();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          router.push('/login')
+        }
+      }
+    })
+  }
 
   return (
     <div>
@@ -131,20 +146,49 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
         <div className="navbar-end text-white justify-center sm:justify-end">
-          <Link
-            href="/login"
-            className="btn btn-outline transition-all duration-300"
-          >
-            Login
-          </Link>
-          <Link
-            href="/register"
-            className="btn btn-outline ml-2 transition-all duration-300"
-          >
-            Register
-          </Link>
+
+         {isPending ? (
+          <span className="loading loading-spinner loading-sm"></span>
+        ) : session ? (
+          // 2. Show this if logged IN
+          <div className="flex items-center gap-3">
+            <span className="font-medium hidden sm:block">
+              {session.user.name}
+            </span>
+            <div className="avatar">
+              <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <Link href="/profile">
+                  <Image 
+                    src={session.user.image || "/default-avatar.png"} 
+                    alt="User Profile" 
+                    width={80}
+                    height={80}
+                  />
+                </Link>
+              </div>
+            </div>
+            <button 
+              onClick={handleLogout} 
+              className="btn btn-error btn-outline btn-sm"
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          // 3. Show this if logged OUT
+          <div className="flex gap-2">
+            <Link href="/login" className="btn btn-outline ml-2 transition-all duration-300">
+              Login
+            </Link>
+            <Link href="/register" className="btn btn-outline ml-2 transition-all duration-300">
+              Register
+            </Link>
+          </div>
+        )}
         </div>
+
       </div>
     </div>
   );

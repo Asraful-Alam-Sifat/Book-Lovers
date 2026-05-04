@@ -39,7 +39,7 @@ const Register = () => {
   const handleGoogleRegister = async () => {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/login",
+      callbackURL: "/",
     });
   };
 

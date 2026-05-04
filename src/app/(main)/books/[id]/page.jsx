@@ -1,5 +1,11 @@
+
+import BorrowBook from "@/components/AllBooks/BorrowBook/BorrowBook";
+import { auth } from "@/lib/auth";
 import { getLocalBooks } from "@/lib/data";
+import { headers } from "next/headers";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+
 
 export const generateMetadata = async ({ params }) => {
   const { id } = await params;
@@ -13,6 +19,14 @@ export const generateMetadata = async ({ params }) => {
 };
 
 const BooksDetails = async ({ params }) => {
+  const session =await auth.api.getSession({
+    headers: await headers()
+  });
+
+  if(!session){
+    redirect('/login');
+  }
+
   const { id } = await params;
   const booksdata = await getLocalBooks();
   const books = booksdata.find((b) => b.id === parseInt(id));
@@ -55,9 +69,7 @@ const BooksDetails = async ({ params }) => {
           </div>
 
           <div className="">
-            <button className="btn text-white inline w-full lg:w-3/5 bg-green-800 font-bold text-lg capitalize rounded-lg hover:bg-green-900 ">
-              Borrow this book
-            </button>
+            <BorrowBook />
           </div>
         </div>
       </div>

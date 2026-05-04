@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
-
 const Login = () => {
   const router = useRouter();
 
@@ -19,17 +18,15 @@ const Login = () => {
   const handleLoginFunc = async (data) => {
     const { email, password } = data;
 
-    
     const { data: response, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/", 
+      callbackURL: "/",
     });
 
     if (error) {
-   
       if (error.status === 401 || error.code === "INVALID_CREDENTIALS") {
-        toast.error("Incorrect email or password. Please try again.");
+        toast.warn("Incorrect email or password. Please try again.");
       } else if (error.status === 404) {
         toast.error("No account found with this email. Please register first.");
       } else {
@@ -38,11 +35,9 @@ const Login = () => {
       return;
     }
 
-  
     toast.success("Welcome back!");
     router.push("/");
   };
- 
 
   const handleGoogleRegister = async () => {
     await authClient.signIn.social({

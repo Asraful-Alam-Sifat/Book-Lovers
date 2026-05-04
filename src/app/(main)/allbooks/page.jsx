@@ -27,7 +27,7 @@ const AllBooks = async ({ searchParams }) => {
       <h1 className="text-2xl font-bold mb-6">
         {query ? (
           <>
-            Results for <span className="text-blue-700">"{params.q}"</span>
+            Results for <span className="text-blue-700">&ldquo;{params.q}&rdquo;</span>
           </>
         ) : category === "all" ? (
           "All Books"
